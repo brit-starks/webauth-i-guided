@@ -1,3 +1,6 @@
+//  This combines all of our middleware into one location
+//  Does a Use with all of the third party methods we want
+
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
