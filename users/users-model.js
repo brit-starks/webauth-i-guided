@@ -1,3 +1,4 @@
+// We import db-config here so we're connected to knex and sqlite
 const db = require('../database/dbConfig.js');
 
 module.exports = {
@@ -28,7 +29,7 @@ function add(user) {
 
 function findById(id) {
   return db('users')
-    .select('id', 'username')
+    .select('id', 'username', 'password')
     .where({ id })
     .first();
 }
